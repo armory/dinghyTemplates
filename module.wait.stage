@@ -1,5 +1,5 @@
 {
-  "name": "Wait",
+  "name": {var name},
   "type": "wait",
-  "waitTime": 30
+  "waitTime": {var time}
 }
