@@ -4,7 +4,7 @@
   "refId": "{{ var "refId" }}",
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
-  "waitTime": {{ var "waitTime" ?: 30 }}
-  "notifications": {{ var "notifications" ?: [] }}
+  "waitTime": {{ var "waitTime" ?: 30 }},
+  "notifications": {{ var "notifications" ?: [] }},
   "skipWaitText": "{{ var "skipWaitText" ?: "Skipped" }}"
 }
