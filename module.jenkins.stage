@@ -11,7 +11,7 @@
   "job": "{{ var "job" }}",
 
   "parameters": {{ var "parameters" ?: {} }},
-  "propertyFile": "{{ var "propertyFile" }}"
+  "propertyFile": "{{ var "propertyFile" }}",
 
-  "notifications": {{ var "notifications" ?: [] }},
+  "notifications": {{ var "notifications" ?: [] }}
 }
