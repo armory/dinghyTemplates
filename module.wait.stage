@@ -3,5 +3,5 @@
   "type": "wait",
 
 
-  "waitTime": {{var "waitTime" ?: 30}}
+  "waitTime": {{ var "waitTime" ?: 30 }}
 }
