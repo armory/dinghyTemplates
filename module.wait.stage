@@ -6,5 +6,7 @@
 
   "waitTime": {{ var "waitTime" ?: 30 }},
   "notifications": {{ var "notifications" ?: [] }},
-  "skipWaitText": "{{ var "skipWaitText" ?: "Skipped" }}"
+  "skipWaitText": "{{ var "skipWaitText" ?: "Skipped" }}",
+
+  {{ module "module.executionOptions.section" }}
 }
