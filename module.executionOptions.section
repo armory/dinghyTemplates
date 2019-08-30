@@ -7,9 +7,7 @@
     "days": [
       2,
       3,
-      4,
-      5,
-      6
+      4
     ],
     "jitter": {
       "enabled": true,
@@ -21,8 +19,8 @@
       {
         "endHour": 1,
         "endMin": 18,
-        "startHour": 1,
-        "startMin": 2
+        "startHour": 3,
+        "startMin": 3
       },
       {
         "endHour": 20,
@@ -34,6 +32,6 @@
   },
   "skipWindowText": "Hello world",
   "stageEnabled": {
-    "expression": "loco=true",
+    "expression": "loco=trueestte",
     "type": "expression"
   }
