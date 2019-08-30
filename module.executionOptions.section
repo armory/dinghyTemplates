@@ -1,0 +1,42 @@
+{
+  "completeOtherBranchesThenFail": false,
+  "continuePipeline": false,
+  "failPipeline": false,
+
+  "restrictExecutionDuringTimeWindow": true,
+  "restrictedExecutionWindow": {
+    "days": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "jitter": {
+      "enabled": true,
+      "maxDelay": 600,
+      "minDelay": 0,
+      "skipManual": true
+    },
+    "whitelist": [
+      {
+        "endHour": 1,
+        "endMin": 18,
+        "startHour": 1,
+        "startMin": 2
+      },
+      {
+        "endHour": 20,
+        "endMin": 0,
+        "startHour": 18,
+        "startMin": 0
+      }
+    ]
+  },
+  "skipWindowText": "Hello world",
+  "stageEnabled": {
+    "expression": "loco=true",
+    "type": "expression"
+  }
+
+}
