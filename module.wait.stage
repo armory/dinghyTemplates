@@ -1,0 +1,5 @@
+{
+  "name": "Wait",
+  "type": "wait",
+  "waitTime": 30
+}
