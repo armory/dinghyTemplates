@@ -5,7 +5,7 @@
 
   "restrictExecutionDuringTimeWindow": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
 
-  {{if .restrictExecutionDuringTimeWindow }}
+  {{if restrictExecutionDuringTimeWindow }}
   "restrictedExecutionWindow": {
     "days": [
       2,
