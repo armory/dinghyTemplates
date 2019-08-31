@@ -7,38 +7,12 @@
   {{if var "restrictExecutionDuringTimeWindow" }}
 
    "restrictExecutionDuringTimeWindow": "{{ var "restrictExecutionDuringTimeWindow" ?: false }}",
-	  "restrictedExecutionWindow": {
-	    "days": [
-	      2,
-	      3,
-	      4
-	    ],
-	    "jitter": {
-	      "enabled": true,
-	      "maxDelay": 600,
-	      "minDelay": 10,
-	      "skipManual": true
-	    },
-	    "whitelist": [
-	      {
-	        "endHour": 1,
-	        "endMin": 18,
-	        "startHour": 3,
-	        "startMin": 3
-	      },
-	      {
-	        "endHour": 20,
-	        "endMin": 0,
-	        "startHour": 18,
-	        "startMin": 0
-	      }
-	    ]
-	  },
+	  "restrictedExecutionWindow": "{{ var "restrictedExecutionWindow" ?: {} }}",
   {{ end }}
 
   {{if var "stageEnabledExpression"}}
 	  "stageEnabled": {
-	    "expression": "{{ var "stageEnabledExpression" ?: "" }}",,
+	    "expression": "{{ var "stageEnabledExpression" ?: "" }}",
 	    "type": "expression"
 	  }
   {{ end }}
