@@ -8,5 +8,6 @@
   "notifications": {{ var "notifications" ?: [] }},
   "skipWaitText": "{{ var "skipWaitText" ?: "Skipped" }}",
 
+  "notifications": {{ var "notifications" ?: [] }},
   {{ module "module.executionOptions.section" }}
 }

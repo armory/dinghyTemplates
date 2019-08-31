@@ -8,6 +8,7 @@
   "instructions": "{{ var "instructions" ?: "Please Verify"}}",
   "failPipeline": true,
   "judgmentInputs": {{ var "judgmentInputs" ?: [] }},
-  "notifications": {{ var "notifications" ?: [] }}
   
+  "notifications": {{ var "notifications" ?: [] }},
+  {{ module "module.executionOptions.section" }}
 }
