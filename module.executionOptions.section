@@ -1,8 +1,11 @@
-  "completeOtherBranchesThenFail": false,
-  "continuePipeline": false,
-  "failPipeline": false,
+  "completeOtherBranchesThenFail": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
 
-  "restrictExecutionDuringTimeWindow": true,
+  "continuePipeline": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
+  "failPipeline": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
+
+  "restrictExecutionDuringTimeWindow": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
+
+  {{if .restrictExecutionDuringTimeWindow }}
   "restrictedExecutionWindow": {
     "days": [
       2,
@@ -12,7 +15,7 @@
     "jitter": {
       "enabled": true,
       "maxDelay": 600,
-      "minDelay": 0,
+      "minDelay": 10,
       "skipManual": true
     },
     "whitelist": [
@@ -30,7 +33,9 @@
       }
     ]
   },
-  "skipWindowText": "Hello world",
+  {{ end }}
+
+  "skipWindowText": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
   "stageEnabled": {
     "expression": "loco=trueestte",
     "type": "expression"
