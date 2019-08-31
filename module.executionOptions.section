@@ -36,12 +36,10 @@
 	  },
   {{ end }}
 
-  "skipWindowText": "{{ var "skipWindowText" ?: "" }}",
-
   {{if var "stageEnabledExpression"}}
 	  "stageEnabled": {
 	    "expression": "{{ var "stageEnabledExpression" ?: "" }}",,
 	    "type": "expression"
 	  }
   {{ end }}
-  
+  "skipWindowText": "{{ var "skipWindowText" ?: "" }}"
