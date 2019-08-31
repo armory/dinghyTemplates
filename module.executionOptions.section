@@ -1,42 +1,46 @@
-  "completeOtherBranchesThenFail": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
+  "completeOtherBranchesThenFail": "{{ var "completeOtherBranchesThenFail" ?: false }}",
 
-  "continuePipeline": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
-  "failPipeline": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
+  "continuePipeline": "{{ var "continuePipeline" ?: false }}",
+  "failPipeline": "{{ var "failPipeline" ?: true }}",
 
-  "restrictExecutionDuringTimeWindow": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
 
-  {{if var "ChangeMeForSomeThingElse222" }}
-  "restrictedExecutionWindow": {
-    "days": [
-      2,
-      3,
-      4
-    ],
-    "jitter": {
-      "enabled": true,
-      "maxDelay": 600,
-      "minDelay": 10,
-      "skipManual": true
-    },
-    "whitelist": [
-      {
-        "endHour": 1,
-        "endMin": 18,
-        "startHour": 3,
-        "startMin": 3
-      },
-      {
-        "endHour": 20,
-        "endMin": 0,
-        "startHour": 18,
-        "startMin": 0
-      }
-    ]
-  },
+  {{if var "restrictExecutionDuringTimeWindow" }}
+
+   "restrictExecutionDuringTimeWindow": "{{ var "restrictExecutionDuringTimeWindow" ?: false }}",
+	  "restrictedExecutionWindow": {
+	    "days": [
+	      2,
+	      3,
+	      4
+	    ],
+	    "jitter": {
+	      "enabled": true,
+	      "maxDelay": 600,
+	      "minDelay": 10,
+	      "skipManual": true
+	    },
+	    "whitelist": [
+	      {
+	        "endHour": 1,
+	        "endMin": 18,
+	        "startHour": 3,
+	        "startMin": 3
+	      },
+	      {
+	        "endHour": 20,
+	        "endMin": 0,
+	        "startHour": 18,
+	        "startMin": 0
+	      }
+	    ]
+	  },
   {{ end }}
 
-  "skipWindowText": "{{ var "ChangeMeForSomeThingElse" ?: "" }}",
-  "stageEnabled": {
-    "expression": "loco=trueestte",
-    "type": "expression"
-  }
+  "skipWindowText": "{{ var "skipWindowText" ?: "" }}",
+
+  {{if var "stageEnabledExpression"}}
+	  "stageEnabled": {
+	    "expression": "{{ var "stageEnabledExpression" ?: "" }}",,
+	    "type": "expression"
+	  }
+  {{ end }}
