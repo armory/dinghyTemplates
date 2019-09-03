@@ -13,8 +13,8 @@
   "parameters": {{ var "parameters" ?: {} }},
   "propertyFile": "{{ var "propertyFile" }}",
 
-  {{ module "module.notifications.section" }},
-  {{ module "module.executionOptions.section" }},
+  {{ module "module.notifications.section" }}
+  {{ module "module.executionOptions.section" }}
 
 
 

@@ -9,6 +9,6 @@
   "failPipeline": true,
   "judgmentInputs": {{ var "judgmentInputs" ?: [] }},
   
-  {{ module "module.notifications.section" }},
+  {{ module "module.notifications.section" }}
   {{ module "module.executionOptions.section" }}
 }

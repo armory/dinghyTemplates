@@ -1,5 +1,5 @@
 
 {{if var "notifications" }}
   "sendNotifications": true,
-  "notifications": {{ var "notifications" ?: [] }}
+  "notifications": {{ var "notifications" ?: [] }},
 {{ end }}
