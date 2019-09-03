@@ -20,7 +20,7 @@
   "skipExpressionEvaluation": false,
 
   "manifestArtifactAccount": "s3artifact",
-  "manifestArtifactId": {{ var "manifestArtifactId" ?: " " }},
+  "manifestArtifactId": "{{ var "manifestArtifactId" ?: " " }}",
 
 
   "requiredArtifactIds": {{ var "requiredArtifactIds" ?: [] }},
