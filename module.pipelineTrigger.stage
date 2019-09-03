@@ -11,7 +11,7 @@
   "waitForCompletion": {{ var "waitForCompletion" ?: true }},
 
   "continuePipeline": {{ var "continuePipeline" ?: false }},
-  "failPipeline": {{ var "failPipeline" ?: true }}
+  "failPipeline": {{ var "failPipeline" ?: true }},
 
   {{ module "module.notifications.section" }},
   {{ module "module.executionOptions.section" }}
