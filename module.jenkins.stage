@@ -5,7 +5,7 @@
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
   "continuePipeline": false,
-  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
+  
   "failPipeline": true,
   "master": "{{ var "master" }}",
   "job": "{{ var "job" }}",
@@ -13,5 +13,10 @@
   "parameters": {{ var "parameters" ?: {} }},
   "propertyFile": "{{ var "propertyFile" }}",
 
-  "notifications": {{ var "notifications" ?: [] }}
+  {{ module "module.notifications.section" }},
+  {{ module "module.executionOptions.section" }},
+
+
+
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
 }
