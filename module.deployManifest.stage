@@ -1,0 +1,34 @@
+{
+  "name": "{{ var "name" ?: "Deploy (Manifest)" }}",
+  "type": "deployManifest"
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "account": "{{ var "account" }}",
+  "cloudProvider": "{{ var "cloudProvider" }}",
+
+  "moniker": {
+    "app": "{{ var "applicationName" }}",
+  },
+
+  "namespaceOverride": "{{ var "namespaceOverride" }}",
+
+  "source": "{{ var "source" ?: "text" }}",
+
+
+
+
+
+  "manifests": "{{ var "textManifests" }}",
+  "requiredArtifacts": [],
+  "skipExpressionEvaluation": false,
+
+
+  "requiredArtifactIds": "{{ var "requiredArtifactIds" ?: [] }}",
+
+  "trafficManagement": "{{ var "trafficManagement" ?: {} }}",
+
+
+  "expectedArtifacts": "{{ var "expectedArtifacts" ?: {} }}"
+
+}
