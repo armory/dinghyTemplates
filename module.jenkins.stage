@@ -18,5 +18,5 @@
 
 
 
-  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }}
 }
