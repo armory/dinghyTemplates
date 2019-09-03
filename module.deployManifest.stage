@@ -1,6 +1,6 @@
 {
   "name": "{{ var "name" ?: "Deploy (Manifest)" }}",
-  "type": "deployManifest"
+  "type": "deployManifest",
   "refId": "{{ var "refId" }}",
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
@@ -8,7 +8,7 @@
   "cloudProvider": "{{ var "cloudProvider" }}",
 
   "moniker": {
-    "app": "{{ var "applicationName" }}",
+    "app": "{{ var "applicationName" }}"
   },
 
   "namespaceOverride": "{{ var "namespaceOverride" }}",
