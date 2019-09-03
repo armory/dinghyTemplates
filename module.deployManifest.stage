@@ -27,13 +27,14 @@
   "requiredArtifactIds": {{ var "requiredArtifactIds" ?: [] }},
 
   "trafficManagement": {{ var "trafficManagement" ?: {
-                                                      "enabled": false,
-                                                      "options": {
-                                                        "enableTraffic": false,
-                                                        "namespace": null,
-                                                        "services": [],
-                                                        "strategy": null
-                                                      } 
+                                                        "enabled": false,
+                                                        "options": {
+                                                          "enableTraffic": false,
+                                                          "namespace": null,
+                                                          "services": [],
+                                                          "strategy": null
+                                                        }
+                                                      }
                         }},
 
 
