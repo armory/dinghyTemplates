@@ -19,7 +19,7 @@
   "requiredArtifacts": [],
   "skipExpressionEvaluation": false,
 
-  "manifestArtifactAccount": "{{ var "manifestArtifactId" ?: " " }}",
+  "manifestArtifactAccount": "{{ var "manifestArtifactAccount" ?: " " }}",
   "manifestArtifactId": "{{ var "manifestArtifactId" ?: " " }}",
 
 
