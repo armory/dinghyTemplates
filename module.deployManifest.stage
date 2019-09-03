@@ -29,6 +29,6 @@
   "trafficManagement": "{{ var "trafficManagement" ?: {} }}",
 
 
-  "expectedArtifacts": "{{ var "expectedArtifacts" ?: {} }}"
+  "expectedArtifacts": "{{ var "expectedArtifacts" ?: [] }}"
 
 }
