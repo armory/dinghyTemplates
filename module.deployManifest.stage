@@ -19,7 +19,7 @@
 
 
 
-  "manifests": "{{ var "textManifests" }}",
+  "manifests": {{ var "textManifests" }},
   "requiredArtifacts": [],
   "skipExpressionEvaluation": false,
 
