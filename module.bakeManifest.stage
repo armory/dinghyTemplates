@@ -12,6 +12,6 @@
 
   "overrides": {{ var "overrides" ?: {} }},
 
-  "evaluateOverrideExpressions": {{ var "evaluateOverrideExpressions" ?: false }},
+  "evaluateOverrideExpressions": {{ var "evaluateOverrideExpressions" ?: false }}
 
 }
