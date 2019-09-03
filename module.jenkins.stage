@@ -13,7 +13,7 @@
   "parameters": {{ var "parameters" ?: {} }},
   "propertyFile": "{{ var "propertyFile" }}",
 
-  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }}
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
 
   {{ module "module.notifications.section" }}
   {{ module "module.executionOptions.section" }}
