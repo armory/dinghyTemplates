@@ -24,11 +24,11 @@
   "skipExpressionEvaluation": false,
 
 
-  "requiredArtifactIds": "{{ var "requiredArtifactIds" ?: [] }}",
+  "requiredArtifactIds": {{ var "requiredArtifactIds" ?: [] }},
 
-  "trafficManagement": "{{ var "trafficManagement" ?: {} }}",
+  "trafficManagement": {{ var "trafficManagement" ?: {} }},
 
 
-  "expectedArtifacts": "{{ var "expectedArtifacts" ?: [] }}"
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }}
 
 }
