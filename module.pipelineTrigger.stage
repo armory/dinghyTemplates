@@ -14,5 +14,5 @@
   "failPipeline": {{ var "failPipeline" ?: true }}
 
   {{ module "module.notifications.section" }},
-  {{ module "module.executionOptions.section" }},
+  {{ module "module.executionOptions.section" }}
 }
