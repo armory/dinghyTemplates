@@ -15,13 +15,12 @@
 
   "source": "{{ var "source" ?: "text" }}",
 
-
-
-
-
-  "manifests": {{ var "textManifests" }},
+  "manifests": {{ var "textManifests" ?: [] }},
   "requiredArtifacts": [],
   "skipExpressionEvaluation": false,
+
+  "manifestArtifactAccount": "s3artifact",
+  "manifestArtifactId": {{ var "manifestArtifactId" }},
 
 
   "requiredArtifactIds": {{ var "requiredArtifactIds" ?: [] }},
