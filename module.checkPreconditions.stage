@@ -1,6 +1,6 @@
 {
   "name": "{{ var "name" ?: "Check Preconditions" }}",
-  "type": "checkPreconditions"
+  "type": "checkPreconditions",
   "refId": "{{ var "refId" }}",
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
