@@ -12,6 +12,12 @@
 
   "overrides": {{ var "overrides" ?: {} }},
 
-  "evaluateOverrideExpressions": {{ var "evaluateOverrideExpressions" ?: false }}
+  "evaluateOverrideExpressions": {{ var "evaluateOverrideExpressions" ?: false }},
+
+
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
+
+  {{ module "module.notifications.section" }}
+  {{ module "module.executionOptions.section" }}
 
 }
