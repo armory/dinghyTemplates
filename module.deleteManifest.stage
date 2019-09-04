@@ -10,7 +10,7 @@
   "location": "{{ var "location" ?: "default" }}",
 
 
-  {{if eq ((var "mode") "static") }}
+  {{if eq {{ var "mode" }} "static") }}
 
     "mode": "{{ var "mode" ?: "static" }}",
     "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}",
