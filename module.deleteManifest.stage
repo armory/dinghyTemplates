@@ -1,6 +1,6 @@
 {
   "name": "{{ var "name" ?: "Delete (Manifest)" }}",
-  "type": "deleteManifest"
+  "type": "deleteManifest",
   "refId": "{{ var "refId" }}",
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
