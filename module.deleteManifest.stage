@@ -11,5 +11,5 @@
   "manifestName": "{{ var "manifestName" }}",
   "mode": "{{ var "mode" ?: "static" }}",
   
-  "options": "{{ var "options" ?: {} }}"
+  "options": {{ var "options" ?: {} }}
 }
