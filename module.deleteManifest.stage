@@ -8,7 +8,7 @@
   "app": "{{ var "app" }}",
   "cloudProvider": "{{ var "cloudProvider" }}",
   "location": "{{ var "location" ?: "default" }}",
-  "manifestName": "{{ var "manifestName" }}",
+  "manifestName": "{{ var "manifestType" }} - {{ var "manifestName" }}",
   "mode": "{{ var "mode" ?: "static" }}",
   
   "options": {{ var "options" ?: {} }}
