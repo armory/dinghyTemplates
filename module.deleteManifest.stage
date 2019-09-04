@@ -10,42 +10,28 @@
   "location": "{{ var "location" ?: "default" }}",
 
 
-  {{if eq "static" (var "mode") }}
+  "mode": "{{ var "mode" ?: "static" }}",
 
-    "mode": "{{ var "mode" ?: "static" }}",
+  {{if eq "static" (var "mode") }}
     "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}",
   {{ end }}
   
   {{if eq "dynamic" (var "mode") }}
-    "cluster": "deployment bla-mychart",
-    "criteria": "largest",
-    "kind": "deployment",
+    "cluster": "{{ var "cluster" }}",
+    "criteria": "{{ var "criteria" ?: "smallest" }}",
+    "kind": "{{ var "kind" }}",
     "kinds": null,
     "labelSelectors": null,
     "manifestName": null,
-    "mode": "dynamic",
   {{ end }}
   
   {{if eq "label" (var "mode") }}
     "cluster": null,
     "criteria": null,
     "kind": null,
-    "kinds": [
-      "deployment"
-    ],
-    "labelSelectors": {
-      "selectors": [
-        {
-          "key": "arabia",
-          "kind": "NOT_CONTAINS",
-          "values": [
-            "bla"
-          ]
-        }
-      ]
-    },
+    "kinds": {{ var "kinds" ?: [] }},
+    "labelSelectors": {{ var "labelSelectors" ?: {} }},
     "manifestName": null,
-    "mode": "label",
   {{ end }}
 
 
