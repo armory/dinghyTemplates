@@ -16,7 +16,7 @@
     "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}",
   {{ end }}
   
-  {{if eq "mode" "dynamic" }}
+  {{if eq "dynamic" (var "mode") }}
     "cluster": "deployment bla-mychart",
     "criteria": "largest",
     "kind": "deployment",
@@ -26,7 +26,7 @@
     "mode": "dynamic",
   {{ end }}
   
-  {{if eq "mode" "label" }}
+  {{if eq "label" (var "mode") }}
     "cluster": null,
     "criteria": null,
     "kind": null,
