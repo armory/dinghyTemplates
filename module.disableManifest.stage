@@ -1,0 +1,31 @@
+{
+  "name": "{{ var "name" ?: "Disable (Manifest)" }}",
+  "type": "disableManifest",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "app": "{{ var "app" }}",
+  "account": "{{ var "account" }}",
+  "cloudProvider": "{{ var "cloudProvider" }}",
+  "location": "{{ var "location" ?: "default" }}",
+
+  "mode": "{{ var "mode" ?: "static" }}",
+
+  {{if eq "static" (var "mode") }}
+    "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}",
+    "labelSelectors": null,
+    "cluster": null,
+	"criteria": null,
+	"kind": null,
+	"kinds": null,
+  {{ end }}
+  
+  {{if eq "dynamic" (var "mode") }}
+    "cluster": "{{ var "cluster" }}",
+    "criteria": "{{ var "criteria" ?: "smallest" }}",
+    "kind": "{{ var "kind" }}",
+    "kinds": null,
+    "labelSelectors": null,
+    "manifestName": null,
+  {{ end }}
+}
