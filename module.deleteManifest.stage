@@ -11,10 +11,5 @@
   "manifestName": "{{ var "manifestName" }}",
   "mode": "{{ var "mode" ?: "static" }}",
   
-  "options": "{{ var "options" ?: {} }}",
-
-  {
-    "cascading": true,
-    "gracePeriodSeconds": 50
-  }
+  "options": "{{ var "options" ?: {} }}"
 }
