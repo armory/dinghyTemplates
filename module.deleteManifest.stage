@@ -4,12 +4,53 @@
   "refId": "{{ var "refId" }}",
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
-  "account": "{{ var "account" }}",
   "app": "{{ var "app" }}",
+  "account": "{{ var "account" }}",
   "cloudProvider": "{{ var "cloudProvider" }}",
   "location": "{{ var "location" ?: "default" }}",
-  "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}",
-  "mode": "{{ var "mode" ?: "static" }}",
+
+
+  {{if eq var "mode" "static" }}
+
+    "mode": "{{ var "mode" ?: "static" }}",
+    "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}",
+  {{ end }}
+  
+  {{if eq var "mode" "dynamic" }}
+    "cluster": "deployment bla-mychart",
+    "criteria": "largest",
+    "kind": "deployment",
+    "kinds": null,
+    "labelSelectors": null,
+    "manifestName": null,
+    "mode": "dynamic",
+  {{ end }}
+  
+  {{if eq var "mode" "label" }}
+    "cluster": null,
+    "criteria": null,
+    "kind": null,
+    "kinds": [
+      "deployment"
+    ],
+    "labelSelectors": {
+      "selectors": [
+        {
+          "key": "arabia",
+          "kind": "NOT_CONTAINS",
+          "values": [
+            "bla"
+          ]
+        }
+      ]
+    },
+    "manifestName": null,
+    "mode": "label",
+  {{ end }}
+
+
+
+
   
   "options": {{ var "options" ?: {} }}
 }
