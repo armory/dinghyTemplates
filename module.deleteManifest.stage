@@ -9,7 +9,6 @@
   "cloudProvider": "{{ var "cloudProvider" }}",
   "location": "{{ var "location" ?: "default" }}",
 
-
   "mode": "{{ var "mode" ?: "static" }}",
 
   {{if eq "static" (var "mode") }}
@@ -33,10 +32,6 @@
     "labelSelectors": {{ var "labelSelectors" ?: {} }},
     "manifestName": null,
   {{ end }}
-
-
-
-
   
   "options": {{ var "options" ?: {} }}
 }
