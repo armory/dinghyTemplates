@@ -1,0 +1,20 @@
+{
+  "name": "{{ var "name" ?: "Delete (Manifest)" }}",
+  "type": "deleteManifest"
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "account": "{{ var "account" }}",
+  "app": "{{ var "app" }}",
+  "cloudProvider": "{{ var "cloudProvider" }}",
+  "location": "{{ var "location" ?: "default" }}",
+  "manifestName": "{{ var "manifestName" }}",
+  "mode": "{{ var "mode" ?: "static" }}",
+  
+  "options": "{{ var "options" ?: {} }}",
+
+  {
+    "cascading": true,
+    "gracePeriodSeconds": 50
+  }
+}
