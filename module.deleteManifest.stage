@@ -10,13 +10,13 @@
   "location": "{{ var "location" ?: "default" }}",
 
 
-  {{if eq "mode" "mode" }}
+  {{if eq "static" var "mode" }}
 
     "mode": "{{ var "mode" ?: "static" }}",
     "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}",
   {{ end }}
   
-  {{if eq "dynamic" "dynamic" }}
+  {{if eq "mode" "dynamic" }}
     "cluster": "deployment bla-mychart",
     "criteria": "largest",
     "kind": "deployment",
