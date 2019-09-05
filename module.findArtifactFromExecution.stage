@@ -10,4 +10,7 @@
 
   "executionOptions": {{ var "requisiteStageRefIds" ?: {} }},
   "expectedArtifacts": {{ var "requisiteStageRefIds" ?: [] }},
+
+  {{ module "module.notifications.section" }}
+  {{ module "module.executionOptions.section" }}
 }
