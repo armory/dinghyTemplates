@@ -17,7 +17,7 @@
     "cluster": null,
 	"criteria": null,
 	"kind": null,
-	"kinds": null
+	"kinds": null,
   {{ end }}
   
   {{if eq "dynamic" (var "mode") }}
@@ -26,6 +26,9 @@
     "kind": "{{ var "kind" }}",
     "kinds": null,
     "labelSelectors": null,
-    "manifestName": null
+    "manifestName": null,
   {{ end }}
+
+  {{ module "module.notifications.section" }}
+  {{ module "module.executionOptions.section" }}
 }
