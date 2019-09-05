@@ -10,7 +10,7 @@
   "payload": {{ var "payload" ?: {} }},
   "customHeaders": {{ var "customHeaders" ?: {} }},
 
-  "waitForCompletion": "{{ var "waitForCompletion" ?: false }}",
+  "waitForCompletion": {{ var "waitForCompletion" ?: false }},
 
   {{if var "waitForCompletion" }}
 
