@@ -12,12 +12,12 @@
   "mode": "{{ var "mode" ?: "static" }}",
 
   {{if eq "static" (var "mode") }}
-    "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}",
+    "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}"
   {{ end }}
   
   {{if eq "dynamic" (var "mode") }}
     "cluster": "{{ var "cluster" }}",
     "criteria": "{{ var "criteria" ?: "smallest" }}",
-    "kind": "{{ var "kind" }}",
+    "kind": "{{ var "kind" }}"
   {{ end }}
 }
