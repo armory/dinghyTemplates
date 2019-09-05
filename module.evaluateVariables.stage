@@ -4,7 +4,7 @@
   "refId": "{{ var "refId" }}",
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
-  "variables" {{ var "variables" ?: [] }},
+  "variables": {{ var "variables" ?: [] }},
 
   {{ module "module.notifications.section" }}
   {{ module "module.executionOptions.section" }}
