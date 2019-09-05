@@ -1,0 +1,11 @@
+{
+  "name": "{{ var "name" ?: "Evaluate Variables" }}",
+  "type": "evaluateVariables",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "variables" {{ var "variables" ?: [] }},
+
+  {{ module "module.notifications.section" }}
+  {{ module "module.executionOptions.section" }}
+}
