@@ -1,0 +1,13 @@
+{
+  "name": "{{ var "name" ?: "Find Artifacts From Execution" }}",
+  "type": "findArtifactFromExecution",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+
+  "application": "{{ var "application" }}",
+  "pipeline": "{{ var "pipeline" }}",
+
+  "executionOptions": {{ var "requisiteStageRefIds" ?: {} }},
+  "expectedArtifacts": {{ var "requisiteStageRefIds" ?: [] }},
+}
