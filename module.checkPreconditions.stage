@@ -1,8 +1,0 @@
-{
-  "name": "{{ var "name" ?: "Check Preconditions" }}",
-  "type": "checkPreconditions",
-  "refId": "{{ var "refId" }}",
-  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
-
-  "preconditions": {{ var "preconditions" ?: [] }}
-}
