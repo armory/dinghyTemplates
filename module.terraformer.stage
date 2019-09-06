@@ -9,4 +9,7 @@
   "action": "{{ var "action" ?: "plan" }}",
   "artifacts": {{ var "artifacts" ?: [] }},
   "dir": "{{ var "dir" }}",
+
+  {{ module "module.notifications.section" }}
+  {{ module "module.executionOptions.section" }}
 }
