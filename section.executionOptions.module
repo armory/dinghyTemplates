@@ -1,0 +1,19 @@
+  "completeOtherBranchesThenFail": "{{ var "completeOtherBranchesThenFail" ?: false }}",
+
+  "continuePipeline": "{{ var "continuePipeline" ?: false }}",
+  "failPipeline": "{{ var "failPipeline" ?: true }}",
+
+
+  {{if var "restrictExecutionDuringTimeWindow" }}
+
+   "restrictExecutionDuringTimeWindow": "{{ var "restrictExecutionDuringTimeWindow" ?: false }}",
+	  "restrictedExecutionWindow": "{{ var "restrictedExecutionWindow" ?: {} }}",
+  {{ end }}
+
+  {{if var "stageEnabledExpression"}}
+	  "stageEnabled": {
+	    "expression": "{{ var "stageEnabledExpression" ?: "" }}",
+	    "type": "expression"
+	  },
+  {{ end }}
+  "skipWindowText": "{{ var "skipWindowText" ?: "" }}"

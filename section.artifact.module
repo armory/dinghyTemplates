@@ -1,0 +1,17 @@
+{
+  "defaultArtifact": {
+    "id": "{{ var "artifactId" }}-2",
+    "name": "{{ var "artifactName" ?: "" }}",
+    "reference": "{{ var "artifactReference" ?: "" }}",
+    "type": "{{ var "type" ?: "" }}",
+  },
+  "displayName": "{{ var "displayName" }}",
+  "id": "{{ var "artifactId" }}",
+  "matchArtifact": {
+    "id": "{{ var "artifactId" }}-1",
+    "name": "{{ var "artifactName" ?: "" }}",
+    "type": "{{ var "type" ?: "" }}",
+  },
+  "useDefaultArtifact": {{ var "useDefaultArtifact" ?: true }},
+  "usePriorExecution": {{ var "usePriorExecution" ?: false }}
+}

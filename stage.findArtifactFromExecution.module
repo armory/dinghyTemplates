@@ -1,0 +1,17 @@
+{
+  "name": "{{ var "name" ?: "Find Artifacts From Execution" }}",
+  "type": "findArtifactFromExecution",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+
+  "application": "{{ var "application" }}",
+  "pipeline": "{{ var "pipeline" }}",
+  "pipeline": "{{ pipelineID "default-app" "default-pipeline" }}",
+
+  "executionOptions": {{ var "executionOptions" ?: {} }},
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
+
+  {{ module "section.notifications.module" }}
+  {{ module "section.executionOptions.module" }}
+}

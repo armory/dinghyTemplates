@@ -1,0 +1,9 @@
+{
+  "description": "{{ var "description" }}",
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
+  "keepWaitingPipelines": {{ var "keepWaitingPipelines" ?: false }},
+  "limitConcurrent": {{ var "limitConcurrent" ?: true }},
+  "parameterConfig": {{ var "parameterConfig" ?: [] }},
+  "stages": {{ var "stages" ?: [] }},
+  "triggers": {{ var "triggers" ?: [] }}
+}

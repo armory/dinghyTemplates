@@ -1,0 +1,94 @@
+{
+  "name": "{{ var "name" ?: "Bake (Manifest)" }}",
+  "type": "bakeManifest",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "templateRenderer": "{{ var "templateRenderer" ?: "HELM2" }}",
+  "outputName": "{{ var "outputName" ?: "bake artifact output" }}",
+  "namespace": "{{ var "namespace" }}",
+
+  "inputArtifacts": [
+
+    {{if var "artifact1"}}
+      {{ module "section.inputArtifact.module" 
+          "account" "{{var account1 }}"
+          "artifact" "{{var artifact1 }}"
+          "id" "{{var artifactId1 }}"
+      }}
+    {{ end }}
+    {{if var "artifact2"}}
+      {{ module "section.inputArtifact.module" 
+          "account" "{{var account2 }}"
+          "artifact" "{{var artifact2 }}"
+          "id" "{{var artifactId2 }}"
+      }}
+    {{ end }}
+    {{if var "artifact3"}}
+      {{ module "section.inputArtifact.module" 
+          "account" "{{var account3 }}"
+          "artifact" "{{var artifact3 }}"
+          "id" "{{var artifactId3 }}"
+      }}
+    {{ end }}
+    {{if var "artifact4"}}
+      {{ module "section.inputArtifact.module" 
+          "account" "{{var account4 }}"
+          "artifact" "{{var artifact4 }}"
+          "id" "{{var artifactId4 }}"
+      }}
+    {{ end }}
+    {{if var "artifact5"}}
+      {{ module "section.inputArtifact.module" 
+          "account" "{{var account5 }}"
+          "artifact" "{{var artifact5 }}"
+          "id" "{{var artifactId5 }}"
+      }}
+    {{ end }}
+  ]
+
+  "overrides": {{ var "overrides" ?: {} }},
+
+  "evaluateOverrideExpressions": {{ var "evaluateOverrideExpressions" ?: false }},
+
+  "expectedArtifacts": [
+    {{if var "outputArtifactId1" }}
+      {{ module "section.artifact.module"
+        "artifactId" "{{var outputArtifactId1}}"
+        "artifactName" "{{var outputArtifactName1}}"
+        "artifactReference" "{{var outputArtifactReference1}}"
+        "displayName" "{{var outputArtifactDisplayName1}}"
+        "type" "{{var outputArtifactType1}}"
+        "useDefaultArtifact" {{var outputUseDefaultArtifact1}}
+        "usePriorExecution" {{var outputUsePriorExecution1}}
+      }}
+    {{ end }}
+    {{if var "outputArtifactId2" }}
+      {{ module "section.artifact.module"
+        "artifactId" "{{var outputArtifactId2}}"
+        "artifactName" "{{var outputArtifactName2}}"
+        "artifactReference" "{{var outputArtifactReference2}}"
+        "displayName" "{{var outputArtifactDisplayName2}}"
+        "type" "{{var outputArtifactType2}}"
+        "useDefaultArtifact" {{var outputUseDefaultArtifact2}}
+        "usePriorExecution" {{var outputUsePriorExecution2}}
+      }}
+    {{ end }}
+    {{if var "outputArtifactId3" }}
+      {{ module "section.artifact.module"
+        "artifactId" "{{var outputArtifactId3}}"
+        "artifactName" "{{var outputArtifactName3}}"
+        "artifactReference" "{{var outputArtifactReference3}}"
+        "displayName" "{{var outputArtifactDisplayName3}}"
+        "type" "{{var outputArtifactType3}}"
+        "useDefaultArtifact" {{var outputUseDefaultArtifact3}}
+        "usePriorExecution" {{var outputUsePriorExecution3}}
+      }}
+    {{ end }}
+
+  ]
+
+  {{ module "section.notifications.module" }}
+  {{ module "section.executionOptions.module" }}
+
+}

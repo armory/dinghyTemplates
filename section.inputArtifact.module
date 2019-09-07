@@ -1,0 +1,5 @@
+{
+  "account": "{{ var "account" }}",
+  "artifact": "{{ var "artifact" ?: null }}",
+  "id": "{{ var "artifactId" }}""
+}

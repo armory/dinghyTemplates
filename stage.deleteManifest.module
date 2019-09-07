@@ -1,0 +1,40 @@
+{
+  "name": "{{ var "name" ?: "Delete (Manifest)" }}",
+  "type": "deleteManifest",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "app": "{{ var "app" }}",
+  "account": "{{ var "account" }}",
+  "cloudProvider": "{{ var "cloudProvider" }}",
+  "location": "{{ var "location" ?: "default" }}",
+
+  "mode": "{{ var "mode" ?: "static" }}",
+
+  {{if eq "static" (var "mode") }}
+    "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}",
+  {{ end }}
+  
+  {{if eq "dynamic" (var "mode") }}
+    "cluster": "{{ var "cluster" }}",
+    "criteria": "{{ var "criteria" ?: "smallest" }}",
+    "kind": "{{ var "kind" }}",
+    "kinds": null,
+    "labelSelectors": null,
+    "manifestName": null,
+  {{ end }}
+  
+  {{if eq "label" (var "mode") }}
+    "cluster": null,
+    "criteria": null,
+    "kind": null,
+    "kinds": {{ var "kinds" ?: [] }},
+    "labelSelectors": {{ var "labelSelectors" ?: {} }},
+    "manifestName": null,
+  {{ end }}
+  
+  "options": {{ var "options" ?: {} }},
+
+  {{ module "section.notifications.module" }}
+  {{ module "section.executionOptions.module" }}
+}

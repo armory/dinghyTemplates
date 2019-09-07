@@ -1,0 +1,40 @@
+{
+  "name": "{{ var "name" ?: "Webhook" }}",
+  "type": "webhook",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "url": "{{ var "url" }}",
+  "method": "{{ var "method" }}",
+  "failFastStatusCodes": {{ var "failFastStatusCodes" ?: [] }},
+  "payload": {{ var "payload" ?: {} }},
+  "customHeaders": {{ var "customHeaders" ?: {} }},
+
+  "waitForCompletion": {{ var "waitForCompletion" ?: false }},
+
+  {{if var "waitForCompletion" }}
+
+    "statusUrlResolution": "{{ var "statusUrlResolution" ?: "getMethod" }}",
+    "waitBeforeMonitor": "{{ var "waitBeforeMonitor" ?: "30" }}",
+    "retryStatusCodes": {{ var "retryStatusCodes" ?: [] }},
+    "statusJsonPath": "{{ var "statusJsonPath" }}",
+    "progressJsonPath": "{{ var "progressJsonPath" }}",
+    "successStatuses": "{{ var "successStatuses" }}",
+    "canceledStatuses": "{{ var "canceledStatuses" }}",
+    "terminalStatuses": "{{ var "terminalStatuses" }}",
+
+
+    {{if eq "webhookResponse" (var "statusUrlResolution") }}
+      "statusUrlJsonPath": "{{ var "statusUrlJsonPath" }}",
+    {{ end }}
+  {{ end }}
+
+
+
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
+
+  
+
+  {{ module "section.notifications.module" }}
+  {{ module "section.executionOptions.module" }}
+}

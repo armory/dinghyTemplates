@@ -1,0 +1,18 @@
+{
+  "name": "{{ var "name" ?: "Trigger a pipeline" }}",
+  "type": "pipeline",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+
+  "application": "{{ var "application" }}",
+  "pipeline": "{{ pipelineID "default-app" "default-pipeline" }}",
+  "pipelineParameters": {{ var "pipelineParameters" ?: {} }},
+  "waitForCompletion": {{ var "waitForCompletion" ?: true }},
+
+  "continuePipeline": {{ var "continuePipeline" ?: false }},
+  "failPipeline": {{ var "failPipeline" ?: true }},
+
+  {{ module "section.notifications.module" }}
+  {{ module "section.executionOptions.module" }}
+}

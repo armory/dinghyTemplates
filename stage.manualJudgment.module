@@ -1,0 +1,16 @@
+{
+  "name": "{{ var "name" ?: "Manual Judgment" }}",
+  "type": "manualJudgment",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+
+  "instructions": "{{ var "instructions" ?: "Please Verify"}}",
+  "failPipeline": true,
+  "judgmentInputs": {{ var "judgmentInputs" ?: [] }},
+  
+  {{ module "section.notifications.module" }}
+  {{ module "section.executionOptions.module" }},
+
+  "comments": "{{ var "comments"}}"
+}

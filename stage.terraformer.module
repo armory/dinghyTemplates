@@ -1,0 +1,15 @@
+{
+  "name": "{{ var "name" ?: "Terraformer" }}",
+  "type": "terraform",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+
+
+  "action": "{{ var "action" ?: "plan" }}",
+  "artifacts": {{ var "artifacts" ?: [] }},
+  "dir": "{{ var "dir" }}",
+
+  {{ module "section.notifications.module" }}
+  {{ module "section.executionOptions.module" }}
+}

@@ -1,0 +1,20 @@
+{
+  "name": "{{ var "name" ?: "Build in Jenkins" }}",
+  "type": "jenkins",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "continuePipeline": false,
+  
+  "failPipeline": true,
+  "master": "{{ var "master" }}",
+  "job": "{{ var "job" }}",
+
+  "parameters": {{ var "parameters" ?: {} }},
+  "propertyFile": "{{ var "propertyFile" }}",
+
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
+
+  {{ module "section.notifications.module" }}
+  {{ module "section.executionOptions.module" }}
+}

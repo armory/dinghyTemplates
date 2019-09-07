@@ -1,0 +1,29 @@
+{
+  "name": "{{ var "name" ?: "Find Artifacts From Resource (Manifest)" }}",
+  "type": "findArtifactsFromResource",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "app": "{{ var "app" }}",
+  "account": "{{ var "account" }}",
+  "cloudProvider": "{{ var "cloudProvider" }}",
+  "location": "{{ var "location" ?: "default" }}",
+
+  "mode": "{{ var "mode" ?: "static" }}",
+
+
+  {{if eq "static" (var "mode") }}
+    "manifestName": "{{ var "manifestType" }} {{ var "manifestName" }}",
+  {{ end }}
+  
+  {{if eq "dynamic" (var "mode") }}
+    "cluster": "{{ var "cluster" }}",
+    "criteria": "{{ var "criteria" ?: "smallest" }}",
+    "kind": "{{ var "kind" }}",
+  {{ end }}
+
+
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
+  {{ module "section.notifications.module" }}
+  {{ module "section.executionOptions.module" }}
+}
