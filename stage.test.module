@@ -1,5 +1,11 @@
 {
-  "name": "{{ var "one" }}",
+  "globals": {
+      "configArtifactHelmChartTarBall": "helmChartId",
+      "bakedArtifactToDeploy": "helmBakedNginxId"
+
+  },
+
+  "name": "{{ var "bakedArtifactToDeploy" }}",
   "type": "bakeManifest",
   "refId": "{{ var "refId" }}",
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
