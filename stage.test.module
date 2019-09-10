@@ -1,0 +1,23 @@
+{
+  "name": "{{ var "one" }}",
+  "type": "bakeManifest",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "templateRenderer": "{{ var "templateRenderer" ?: "HELM2" }}",
+  "outputName": "{{ var "outputName" ?: "bake artifact output" }}",
+  "namespace": "{{ var "namespace" }}",
+
+  "inputArtifacts": {{ var "inputArtifacts" ?: [] }},
+
+  "overrides": {{ var "overrides" ?: {} }},
+
+  "evaluateOverrideExpressions": {{ var "evaluateOverrideExpressions" ?: false }},
+
+
+  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
+
+  {{ module "section.notifications.module" }}
+  {{ module "section.executionOptions.module" }}
+
+}
