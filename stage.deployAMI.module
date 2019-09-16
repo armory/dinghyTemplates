@@ -1,0 +1,8 @@
+{
+  "name": "{{ var "name" ?: "Deploy" }}",
+  "type": "Deploy",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "clusters": {{ var "clusters" ?: [] }}
+}

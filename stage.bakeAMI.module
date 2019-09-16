@@ -1,0 +1,26 @@
+{
+  "name": "{{ var "name" ?: "Bake" }}",
+  "type": "bake",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+  "regions": {{ var "regions" ?: [] }},
+  "package": "{{ var "package" }}",
+  "baseOs": "{{ var "baseOs" ?: "trusty" }}",
+  "baseLabel": "{{ var "baseLabel" ?: "release" }}",
+  "vmType": "{{ var "vmType" ?: "hvm" }}",
+  "rebake": {{ var "rebake" ?: false }},
+
+  "templateFileName": "{{ var "templateFileName" }}",
+  "extendedAttributes": {{ var "extendedAttributes" ?: {} }},
+  "varFileName": "{{ var "varFileName" }}",
+  "baseName": "{{ var "baseName" }}",
+  "baseAmi": "{{ var "baseAmi" }}",
+  "amiName": "{{ var "amiName" }}",
+  "amiSuffix": "{{ var "amiSuffix" }}",
+
+  "cloudProviderType": "aws",
+  "storeType": "ebs",
+  "user": "[anonymous]"
+
+}
