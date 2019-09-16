@@ -1,6 +1,6 @@
 {
   "name": "{{ var "name" ?: "Deploy" }}",
-  "type": "Deploy",
+  "type": "deploy",
   "refId": "{{ var "refId" }}",
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
