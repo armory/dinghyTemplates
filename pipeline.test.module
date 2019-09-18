@@ -7,7 +7,7 @@
     "stages": [
 
       {{ module "stage.bakeManifest.module" 
-          "name" "{{var application }}",
+          "name" "{{var application }}"
           "refId" 1	
           "requisiteStageRefIds" []
 
