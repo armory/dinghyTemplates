@@ -1,13 +1,13 @@
   {
     "application": "{{ var "application" }}",
     "keepWaitingPipelines": false,
-    "name": "bakeAndDeploy",
+    "name": "{{var "application" }}",
     "limitConcurrent": true,
 
     "stages": [
 
       {{ module "stage.bakeManifest.module" 
-          "name" "{{var application }}"
+          "name" {{var application }}
           "refId" 1	
           "requisiteStageRefIds" []
 
