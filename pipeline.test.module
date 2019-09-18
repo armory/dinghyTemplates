@@ -7,7 +7,7 @@
     "stages": [
 
       {{ module "stage.bakeManifest.module" 
-          "name" "{{ var "application" }}"
+          "name" {{var application }}
           "refId" 1	
           "requisiteStageRefIds" []
 
@@ -15,25 +15,6 @@
           "outputName" "bake-artifact-output"
           "namespace" "karlo"
           
-      }},
-      {{ module "stage.deployManifest.module" 
-        "name" "deploy manifest"
-        "refId" 2
-        "requisiteStageRefIds" ["1"] 
-
-        "account" "kubernetes"
-        "cloudProvider" "kubernetes"
-        "applicationName" "training"
-        "namespaceOverride" "karlo"
-        "source" "artifact"
-        "manifestArtifactId" "helmBakedNginxId"
-        "manifestArtifactAccount" "embedded-artifact"
-        
-        "requiredArtifacts" []
-        "skipExpressionEvaluation" false
-        "requiredArtifactIds" []
-        "expectedArtifacts" []
-
       }}
     ],
     "triggers": [],
