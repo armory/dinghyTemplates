@@ -1,0 +1,69 @@
+- clusters:
+    - account: aws
+      application: patreonpy
+      associatePublicIpAddress: false
+      availabilityZones:
+        us-west-1:
+        - us-west-1b
+        - us-west-1c
+      base64UserData: base64UserData
+      capacity:
+        desired: 1
+        max: 1
+        min: 1
+      cloudProvider: aws
+      cooldown: 10
+      copySourceCustomBlockDeviceMappings: false
+      delayBeforeDisableSec: 0
+      delayBeforeScaleDownSec: 0
+      dirty: {}
+      ebsOptimized: true
+      enabledMetrics: []
+      freeFormDetails: web
+      healthCheckGracePeriod: '180'
+      healthCheckType: ELB
+      iamRole: tf_webpython-admin_production
+      instanceMonitoring: false
+      instanceType: m5.xlarge
+      keyPair: launch_root
+      loadBalancers: []
+      moniker:
+        app: patreonpy
+        detail: web
+        stack: staging
+      preferSourceCapacity: true
+      provider: aws
+      rollback:
+        onFailure: false
+      securityGroups:
+      - sg-01fab16f791fd9f46
+      - sg-873f31e2
+      - sg-71070617
+      - sg-065bd460
+      - sg-080ef5ce41236b464
+      spelLoadBalancers: []
+      spelTargetGroups: []
+      spotPrice: ''
+      stack: staging
+      strategy: highlander
+      subnetType: ec2-private-subnets
+      suspendedProcesses: []
+      tags:
+        environment: production
+        provision_branch: ${parameters["provision_branch"]}
+        provisioner: spinnaker
+        role: webpython-spinnaker-staging
+      targetGroups:
+      - patreonpy-staging-web
+      targetHealthyDeployPercentage: 100
+      terminationPolicies:
+      - Default
+      useAmiBlockDeviceMappings: false
+      useSourceCapacity: true
+    name: Deploy Staging Web
+    overrideTimeout: true
+    refId: '2'
+    requisiteStageRefIds:
+    - '1'
+    stageTimeoutMs: 1800000
+    type: deploy

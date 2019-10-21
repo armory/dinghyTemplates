@@ -1,0 +1,15 @@
+- cloudProvider: aws
+    cloudProviderType: aws
+    name: Find Base Image from Tags
+    packageName: patreon_python_bionic_
+    refId: '9'
+    regions:
+    - us-west-1
+    requisiteStageRefIds:
+    - '3'
+    tags:
+      Name: patreon_python
+      distro: ubuntu
+      env: prod
+      release: bionic
+    type: findImageFromTags

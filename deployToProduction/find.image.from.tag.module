@@ -1,0 +1,11 @@
+- cloudProvider: aws
+    cloudProviderType: aws
+    name: Find Image from Tags3
+    packageName: "${ trigger['parentExecution']['stages'][0]['context'][imageName]}"
+    refId: '1'
+    regions:
+    - us-west-1
+    requisiteStageRefIds: []
+    tags:
+      smoketests_passed: 'true'
+    type: findImageFromTags

@@ -1,0 +1,9 @@
+- name: Enforce Parameters
+    preconditions:
+    - context:
+        expression: "${parameters.containsKey('python_sha')}"
+      failPipeline: true
+      type: expression
+    refId: '4'
+    requisiteStageRefIds: []
+    type: checkPreconditions

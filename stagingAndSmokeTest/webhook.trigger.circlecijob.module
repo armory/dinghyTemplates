@@ -1,0 +1,8 @@
+- alias: preconfiguredWebhook
+    name: Webhook Trigger CircleCi Job
+    refId: '5'
+    requisiteStageRefIds:
+    - '2'
+    - '4'
+    statusUrlResolution: getMethod
+    type: whkCircleCi

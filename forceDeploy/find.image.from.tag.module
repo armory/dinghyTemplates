@@ -1,0 +1,13 @@
+- cloudProvider: aws
+    cloudProviderType: aws
+    name: Find Image from Tags
+    packageName: none-all-
+    refId: '1'
+    regions:
+    - us-west-1
+    requisiteStageRefIds:
+    - '4'
+    tags:
+      python_sha: ${parameters["python_sha"]}
+      smoketests_passed: 'true'
+    type: findImageFromTags

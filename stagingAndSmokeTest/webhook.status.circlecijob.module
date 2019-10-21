@@ -1,0 +1,14 @@
+- alias: preconfiguredWebhook
+    canceledStatuses: canceled
+    name: Webhook Status CircleCi Job
+    parameterValues:
+      buildNum: replace
+    refId: '6'
+    requisiteStageRefIds:
+    - '5'
+    statusJsonPath: "$.status"
+    statusUrlResolution: getMethod
+    successStatuses: success
+    terminalStatuses: failed
+    type: whCircleCiStatus
+    waitForCompletion: true

@@ -1,0 +1,14 @@
+- name: Enforce parameters
+    preconditions:
+    - cloudProvider: aws
+      context:
+        expression: "${parameters.containsKey('venv_sha')}"
+      failPipeline: true
+      type: expression
+    - context:
+        expression: "${parameters.containsKey('python_sha') }"
+      failPipeline: true
+      type: expression
+    refId: '3'
+    requisiteStageRefIds: []
+    type: checkPreconditions
