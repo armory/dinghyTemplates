@@ -9,6 +9,7 @@
         "limitConcurrent": true,
 
         "expectedArtifacts": [
+
                                 {
                                   "defaultArtifact": {
                                     "artifactAccount": "gitrepo",
