@@ -6,7 +6,6 @@
 
 
   "instructions": "{{ var "instructions" ?: "Please Verify"}}",
-  "failPipeline": true,
   "judgmentInputs": {{ var "judgmentInputs" ?: [] }},
   
   {{ module "section.notifications.module" }}

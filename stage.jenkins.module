@@ -4,9 +4,6 @@
   "refId": "{{ var "refId" }}",
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
-  "continuePipeline": false,
-  
-  "failPipeline": true,
   "master": "{{ var "master" }}",
   "job": "{{ var "job" }}",
 

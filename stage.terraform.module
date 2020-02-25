@@ -1,0 +1,18 @@
+{
+  "name": "{{ var "name" ?: "Terraform" }}",
+  "type": "terraform",
+  "refId": "{{ var "refId" }}",
+  "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+
+
+  "action": "{{ var "action" ?: "plan" }}",
+  "terraformVersion": "{{ var "terraformVersion" ?: "" }}",
+
+  "artifacts": [{{ var "artifacts" ?: [] }}],
+
+  "dir": "{{ var "dir" ?: "" }}",
+
+
+  "overrides": {{ var "overrides" ?: {} }},
+  "targets": {{ var "targets" ?: [] }}
+}
