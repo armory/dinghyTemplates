@@ -5,7 +5,7 @@
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
   "waitTime": {{ var "waitTime" ?: 30 }},
-  "skipWaitText": "{{ var "skipWaitText" ?: "Skipped" }}",
+  "skipWaitText": "{{ var "skipWaitText" ?: "Skip this wait time at your own risk" }}",
 
   {{ module "section.notifications.module" }}
   {{ module "section.executionOptions.module" }}
