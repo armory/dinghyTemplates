@@ -1,29 +1,9 @@
 {
-  "globals": {
-      "configArtifactHelmChartTarBall": "helmChartId",
-      "bakedArtifactToDeploy": "helmBakedNginxId"
-
-  },
-
-  "name": "{{ var "bakedArtifactToDeploy" }}",
-  "type": "bakeManifest",
+  "name": "{{ var "name" ?: "wait" }}",
+  "type": "wait",
   "refId": "{{ var "refId" }}",
   "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
 
-  "templateRenderer": "{{ var "templateRenderer" ?: "HELM2" }}",
-  "outputName": "{{ var "outputName" ?: "bake artifact output" }}",
-  "namespace": "{{ var "namespace" }}",
-
-  "inputArtifacts": {{ var "inputArtifacts" ?: [] }},
-
-  "overrides": {{ var "overrides" ?: {} }},
-
-  "evaluateOverrideExpressions": {{ var "evaluateOverrideExpressions" ?: false }},
-
-
-  "expectedArtifacts": {{ var "expectedArtifacts" ?: [] }},
-
-  {{ module "section.notifications.module" }}
-  {{ module "section.executionOptions.module" }}
-
+  "waitTime": {{ var "waitTime" ?: 30 }},
+  "skipWaitText": "{{ var "skipWaitText" ?: "Skip this wait time at your own risk" }}"
 }
