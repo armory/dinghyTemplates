@@ -1,8 +1,11 @@
-# dinghyTemplates
+# Dinghy Templates
 
 This is a WIP for creating templates for each stage in spinnaker.
 Sister repository lives on:
 https://github.com/armory/dinghyPipelines
+
+Highly recomended to use the dinghy cli parser on:
+https://github.com/armory-io/arm
 
 It contains the uses for this templates 
 
