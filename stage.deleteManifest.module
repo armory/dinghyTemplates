@@ -7,7 +7,7 @@
   "app": "{{ var "app" }}",
   "account": "{{ var "account" }}",
   "cloudProvider": "{{ var "cloudProvider" }}",
-  "location": "{{ var "location" ?: "default" }}",
+  "location": "{{ var "namespace" ?: "default" }}",
 
   "mode": "{{ var "mode" ?: "static" }}",
 
